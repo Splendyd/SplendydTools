@@ -12,7 +12,7 @@ Function Get-RdInteger {
     return $rdInt
 }
 
-Function Get-RdSpecial {
+Function Get-RdPassword {
     $rdSpecial = "!", "?", "$", "#" | Get-Random
     return $rdSpecial
 }
