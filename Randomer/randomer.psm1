@@ -17,7 +17,7 @@ Function Get-RdSpecial {
     return $rdSpecial
 }
 
-Function Get-RdPassword {
+Function Get-MyFavoritePassword {
 <#
     Create a temp password
     <UpperCase>($num-1)*<LowerCase>$num*<Digit><SpecialCharacter>
