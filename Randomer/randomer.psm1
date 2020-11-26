@@ -12,12 +12,12 @@ Function Get-RdInteger {
     return $rdInt
 }
 
-Function Get-RdPassword {
+Function Get-RdSpecial {
     $rdSpecial = "!", "?", "$", "#" | Get-Random
     return $rdSpecial
 }
 
-Function Get-MyFavoritePassword {
+Function Get-RdPassword {
 <#
     Create a temp password
     <UpperCase>($num-1)*<LowerCase>$num*<Digit><SpecialCharacter>
