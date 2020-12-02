@@ -1,4 +1,4 @@
-# spddTools
+# Splendyd Tools
 
 ## Randomer
 
