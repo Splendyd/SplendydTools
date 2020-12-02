@@ -48,7 +48,3 @@ Function Get-RdPassword {
     # Return the random generated password
     return $password
 }
-
-Export-ModuleMember `
-    -Function `
-        Get-RdPassword

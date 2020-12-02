@@ -20,7 +20,3 @@ function ConvertTo-NicerDuration {
         return $return
     }
 }
-
-Export-ModuleMember `
-    -Function `
-        ConvertTo-NicerDuration
