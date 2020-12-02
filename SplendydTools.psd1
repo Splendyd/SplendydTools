@@ -18,7 +18,7 @@ ModuleVersion = '1.0.0.0'
 # CompatiblePSEditions = @()
 
 # ID used to uniquely identify this module
-GUID = 'b219507e-482d-4894-830d-93ecd4fc82c4'
+GUID = '3d3ffeba-5553-4add-9fdf-7ccf7b0a2e5c'
 
 # Author of this module
 Author = 'j.loiseau'
@@ -51,9 +51,7 @@ PowerShellVersion = '7.1.0'
 # ProcessorArchitecture = ''
 
 # Modules that must be imported into the global environment prior to importing this module
-RequiredModules = @('Nicer', 
-               'Profiler', 
-               'Randomer')
+# RequiredModules = @()
 
 # Assemblies that must be loaded prior to importing this module
 # RequiredAssemblies = @()
@@ -68,7 +66,9 @@ RequiredModules = @('Nicer',
 # FormatsToProcess = @()
 
 # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
-# NestedModules = @()
+NestedModules = @('Nicer', 
+               'Profiler', 
+               'Randomer')
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
 FunctionsToExport = 'ConvertTo-NicerDuration', 'Read-FileLikeTail', 'Get-RdPassword'

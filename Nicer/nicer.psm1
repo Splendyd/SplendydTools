@@ -7,16 +7,7 @@ function ConvertTo-NicerDuration {
     param (
         [int]$seconds
     )
-    
-    begin {
-        
-    }
-    
-    process {
-        $return = ("{0:hh\:mm\:ss}" -f ([timespan]::fromseconds( $seconds )))
-    }
-    
-    end {
-        return $return
-    }
+
+    $return = ("{0:hh\:mm\:ss}" -f ([timespan]::fromseconds( $seconds )))
+    return $return
 }
