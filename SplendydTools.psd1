@@ -21,16 +21,16 @@ ModuleVersion = '1.0.0.0'
 GUID = '3d3ffeba-5553-4add-9fdf-7ccf7b0a2e5c'
 
 # Author of this module
-Author = 'j.loiseau'
+Author = 'Jnius Prime'
 
 # Company or vendor of this module
-CompanyName = 'Unknown'
+CompanyName = 'Splendyd'
 
 # Copyright statement for this module
-Copyright = '(c) j.loiseau. All rights reserved.'
+Copyright = '(c) Splendyd. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'demonstrate multiple psm1 files as 1 powershell module with 1 powershell module manifest'
+Description = 'Splendyd Toolbox'
 
 # Minimum version of the PowerShell engine required by this module
 PowerShellVersion = '7.1.0'
@@ -66,12 +66,19 @@ PowerShellVersion = '7.1.0'
 # FormatsToProcess = @()
 
 # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
-NestedModules = @('Nicer', 
-               'Profiler', 
-               'Randomer')
+NestedModules =
+    'Nicer', 
+    'Profiler', 
+    'Randomer',
+    'SendGrider'
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = 'ConvertTo-NicerDuration', 'Read-FileLikeTail', 'Get-RdPassword'
+FunctionsToExport =
+    'ConvertTo-NicerDuration',
+    'Read-FileLikeTail',
+    'Get-RdPassword',
+    'New-SendGridRecipient',
+    'Send-SendGridMail'
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = '*'
