@@ -70,14 +70,17 @@ NestedModules =
     'Nicer', 
     'Profiler', 
     'Randomer',
-    'SendGrider'
+    'SendGrider',
+    'Sqler'
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
 FunctionsToExport =
+    'ConvertTo-NicerCase',
     'ConvertTo-NicerDuration',
-    'Read-FileLikeTail',
     'Get-RdPassword',
+    'Get-SqlerDataList',
     'New-SendGridRecipient',
+    'Read-FileLikeTail',
     'Send-SendGridMail'
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.

@@ -4,24 +4,24 @@
 
 class SendGridRecipient {
     [string]$name 
-    [string]$address
+    [string]$email
 
     SendGridRecipient (
-        $name,
-        $address
+        [string]$name,
+        [string]$email
     ) {
         $this.name = $name 
-        $this.address = $address 
+        $this.address = $email 
     }
 }
 
 Function New-SendGridRecipient {
     param(
         [string]$name,
-        [string]$address
+        [mailaddress]$email
     )
 
-    return [SendGridRecipient]::new("$name", "$address")
+    return [SendGridRecipient]::new("$name", "{0}" -f $email.ToString())
 }
 
 Function Send-SendGridMail {
