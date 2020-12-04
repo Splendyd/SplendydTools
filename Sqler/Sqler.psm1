@@ -2,26 +2,6 @@
     Sqler!
 #>
 
-Function Get-SqlerConnectionString {
-    param (
-        [PSCustomObject]$parameters
-    )
-
-    begin {
-        $connectionString = ""
-    }
-    
-    process {
-        foreach ( $property in $parameters.psobject.Properties ) {
-            $connectionString += "{0}={1};" -f $property.name, $property.value
-        }
-    }
-
-    end {
-        return $connectionString
-    }
-}
-
 Function Get-SqlerDataList {
     param(
         [string]$pathAssemblyMySqlConnector = "C:\tools\MySQLConnector\MySql.Data.dll",

@@ -77,8 +77,6 @@ NestedModules =
 FunctionsToExport =
     'ConvertTo-NicerCase',
     'ConvertTo-NicerDuration',
-    'ConvertTo-NicerHashtable',
-    'ConvertTo-NicerHashtableToString',
     'Get-RdPassword',
     'Get-SqlerDataList',
     'New-SendGridRecipient',
