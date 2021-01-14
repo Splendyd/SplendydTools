@@ -2,9 +2,11 @@
     Nicer - Render stuff Nicer...
 #>
     
-Function ConvertTo-NicerCase {
+Function ConvertTo-NicerCase
+{
     [CmdletBinding()]
-    param (
+    param
+    (
         [string]$string
     )
     
@@ -12,17 +14,50 @@ Function ConvertTo-NicerCase {
     return $ti.ToTitleCase( $string.ToLower() )
 }
 
-Function ConvertTo-NicerDuration {
+Function ConvertTo-NicerDuration
+{
     [CmdletBinding()]
-    param (
+    param
+    (
         [int]$seconds
     )
 
-    $return = ( "{0:hh\:mm\:ss}" -f ([timespan]::fromseconds( $seconds )))
-    return $return
+    begin
+    {
+        $days = [Math]::Truncate( $seconds / 86400 )
+    }
+    
+    process
+    {
+        switch ( $days )
+        {
+            0
+            {
+                $niceDuration += ( "{0:hh\:mm\:ss}" -f ([timespan]::fromseconds( $seconds )))
+                if ( $lit )
+                {
+                    $
+                }
+            }
+            default
+            {
+                $niceDuration += ( "{0:dd\.hh\:mm\:ss}" -f ([timespan]::fromseconds( $seconds )))
+                if ( $lit )
+                {
+                    $
+                }
+            }
+        }
+    }
+
+    end
+    {
+        return $niceDuration
+    }
 }
 
-Function ConvertTo-NicerHashtable {
+Function ConvertTo-NicerHashtable
+{
     <# 
     .USAGE
         $json | ConvertFrom-Json | ConvertTo-HashTable
@@ -81,7 +116,8 @@ Function ConvertTo-NicerHashtable {
     }
 }
 
-Function ConvertTo-NicerHashtableToString {
+Function ConvertTo-NicerHashtableToString
+{
     <# 
     .USAGE
         
@@ -97,17 +133,20 @@ Function ConvertTo-NicerHashtableToString {
         [string]$join
     )
 
-    begin {
+    begin
+    {
         $output = ""
     }
     
-    process {
+    process
+    {
         foreach ( $key in $hashtable.keys ) {
             $output += "{0}{1}{2};" -f $key, $join, $hashtable[$key]
         }
     }
 
-    end {
+    end
+    {
         return $output
     }
 }
